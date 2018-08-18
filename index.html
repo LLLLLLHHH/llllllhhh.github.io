@@ -342,26 +342,26 @@
       
         
           
-            <h1 id="Linux-安装-python3-7"><a href="#Linux-安装-python3-7" class="headerlink" title="Linux 安装 python3.7"></a>Linux 安装 python3.7</h1><hr>
-<blockquote>
+            <blockquote>
 <p>环境：腾讯云CentOS 7.4 64位</p>
 </blockquote>
-<h2 id="1、安装依赖包"><a href="#1、安装依赖包" class="headerlink" title="1、安装依赖包"></a>1、安装依赖包</h2><p>1）首先安装gcc编译器，gcc有些系统版本已经默认安装，通过  <code>gcc --version</code>  查看，没安装的先安装gcc，</p>
+<hr>
+<h1 id="安装依赖包"><a href="#安装依赖包" class="headerlink" title="安装依赖包"></a>安装依赖包</h1><p>1）首先安装gcc编译器，gcc有些系统版本已经默认安装，通过  <code>gcc --version</code>  查看，没安装的先安装gcc，</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum -y install gcc</span><br><span class="line">yum install gcc-c++</span><br></pre></td></tr></table></figure>
 <p>第二个是对c++的支持，可不安装</p>
 <p>2）安装其它依赖包，（注：不要缺少，否则有可能安装python出错，python3.7.0以下的版本可不装 libffi-devel ）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y install zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gdbm-devel db4-devel libpcap-devel xz-devel libffi-devel</span><br></pre></td></tr></table></figure></p>
-<h2 id="2、下载python3-7-0源码，根据需求下载"><a href="#2、下载python3-7-0源码，根据需求下载" class="headerlink" title="2、下载python3.7.0源码，根据需求下载"></a>2、下载python3.7.0源码，根据需求下载</h2><p>1）在 <a href="https://www.python.org/ftp/python/" target="_blank" rel="noopener">https://www.python.org/ftp/python/</a> 中选择自己需要的python源码包，这里用的是python3.7.0</p>
+<h1 id="下载python3-7-0源码，根据需求下载"><a href="#下载python3-7-0源码，根据需求下载" class="headerlink" title="下载python3.7.0源码，根据需求下载"></a>下载python3.7.0源码，根据需求下载</h1><p>1）在 <a href="https://www.python.org/ftp/python/" target="_blank" rel="noopener">https://www.python.org/ftp/python/</a> 中选择自己需要的python源码包，这里用的是python3.7.0</p>
 <p>2）下载</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https://www.python.org/ftp/python/3.7.0/Python-3.7.0.tgz</span><br></pre></td></tr></table></figure>
-<h2 id="3、解压Python-3-7-0-tgz"><a href="#3、解压Python-3-7-0-tgz" class="headerlink" title="3、解压Python-3.7.0.tgz"></a>3、解压Python-3.7.0.tgz</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf Python-3.7.0.tgz</span><br></pre></td></tr></table></figure>
-<h2 id="4、建立一个空文件夹，用于存放python3程序-可自定义，下面记得作相关修改就行"><a href="#4、建立一个空文件夹，用于存放python3程序-可自定义，下面记得作相关修改就行" class="headerlink" title="4、建立一个空文件夹，用于存放python3程序(可自定义，下面记得作相关修改就行)"></a>4、建立一个空文件夹，用于存放python3程序(可自定义，下面记得作相关修改就行)</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir /usr/local/python3</span><br></pre></td></tr></table></figure>
-<h2 id="5、执行配置文件，编译，编译安装"><a href="#5、执行配置文件，编译，编译安装" class="headerlink" title="5、执行配置文件，编译，编译安装"></a>5、执行配置文件，编译，编译安装</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd Python-3.7.0</span><br><span class="line">./configure --prefix=/usr/local/python3</span><br><span class="line">make &amp;&amp; make install</span><br></pre></td></tr></table></figure>
+<h1 id="解压Python-3-7-0-tgz"><a href="#解压Python-3-7-0-tgz" class="headerlink" title="解压Python-3.7.0.tgz"></a>解压Python-3.7.0.tgz</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf Python-3.7.0.tgz</span><br></pre></td></tr></table></figure>
+<h1 id="建立一个空文件夹，用于存放python3程序-可自定义，下面记得作相关修改就行"><a href="#建立一个空文件夹，用于存放python3程序-可自定义，下面记得作相关修改就行" class="headerlink" title="建立一个空文件夹，用于存放python3程序(可自定义，下面记得作相关修改就行)"></a>建立一个空文件夹，用于存放python3程序(可自定义，下面记得作相关修改就行)</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir /usr/local/python3</span><br></pre></td></tr></table></figure>
+<h1 id="执行配置文件，编译，编译安装"><a href="#执行配置文件，编译，编译安装" class="headerlink" title="执行配置文件，编译，编译安装"></a>执行配置文件，编译，编译安装</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd Python-3.7.0</span><br><span class="line">./configure --prefix=/usr/local/python3</span><br><span class="line">make &amp;&amp; make install</span><br></pre></td></tr></table></figure>
 <p>安装完成没有提示错误便安装成功了</p>
-<h2 id="6、建立软链接"><a href="#6、建立软链接" class="headerlink" title="6、建立软链接"></a>6、建立软链接</h2><blockquote>
+<h1 id="建立软链接"><a href="#建立软链接" class="headerlink" title="建立软链接"></a>建立软链接</h1><blockquote>
 <p>关于软链接：<a href="https://www.cnblogs.com/kex1n/p/5193826.html" target="_blank" rel="noopener">https://www.cnblogs.com/kex1n/p/5193826.html</a></p>
 </blockquote>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ln -s /usr/local/python3/bin/python3.7 /usr/bin/python3</span><br><span class="line">ln -s /usr/local/python3/bin/pip3.7 /usr/bin/pip3</span><br></pre></td></tr></table></figure>
-<h2 id="7、测试一下python3是否可以用"><a href="#7、测试一下python3是否可以用" class="headerlink" title="7、测试一下python3是否可以用"></a>7、测试一下python3是否可以用</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python3 --version</span><br></pre></td></tr></table></figure>
+<h1 id="测试一下python3是否可以用"><a href="#测试一下python3是否可以用" class="headerlink" title="测试一下python3是否可以用"></a>测试一下python3是否可以用</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python3 --version</span><br></pre></td></tr></table></figure>
 <hr>
 <blockquote>
 <p>参考博客：<a href="http://www.cnblogs.com/yhongji/p/9383857.html" target="_blank" rel="noopener">http://www.cnblogs.com/yhongji/p/9383857.html</a></p>
